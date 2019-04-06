@@ -2,16 +2,7 @@ package source;
 import java.util.ArrayList;
 import java.util.*;
 public class Model {
-	private double Value ;
-	private String Op  = ""; 
-	private String add = "+";
-	private String sub = "-";
-	private String mul = "*";
-	private String div = "/";
-	private String sqt = "Sqt";
-	private String mod = "%";
-	private String eq = "=";
-	
+
 	public int getNum(ArrayList arr) {
 		int size = arr.size();
 		int num = 0 ; 

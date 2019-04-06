@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax.swing.*;
 public class View extends JFrame{
 	private JButton[] buttons ;
-	private static final String[] Labels = {"7" ,"8" ,"9" ,"/" ,"4" ,"5" ,"6" ,"*" ,"1","2","3","+","0",".","=","-","Sqt","%"};
+	private static final String[] Labels = {"7" ,"8" ,"9" ,"/" ,"4" ,"5" ,"6" ,"*" ,"1","2","3","+","0","=","-","Sqt","%"};
 	private JTextArea result;
 	private JPanel panel ; 
 	private int num ; 
@@ -12,10 +12,10 @@ public class View extends JFrame{
     super("Calc");
 	panel = new JPanel();	
 	this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-	this.setSize(220,240);
-	GridLayout myLayout = new GridLayout(5,5);
-	buttons = new JButton[18];
-	for(int c = 0 ; c <18 ; c++) {
+	this.setSize(200,240);
+	GridLayout myLayout = new GridLayout(3,3);
+	buttons = new JButton[17];
+	for(int c = 0 ; c <17 ; c++) {
 		buttons[c] = new JButton(Labels[c]);
 		panel.add(buttons[c]);
 	}
@@ -29,7 +29,7 @@ public class View extends JFrame{
 	
 	}
 	public void addButtonListener(ActionListener listenForButton) {
-		for(int c = 0 ; c <18 ; c++) {
+		for(int c = 0 ; c <17 ; c++) {
 			buttons[c] .addActionListener(listenForButton);
 			
 		}

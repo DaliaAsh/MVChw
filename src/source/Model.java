@@ -2,7 +2,8 @@ package source;
 import java.util.ArrayList;
 import java.util.*;
 public class Model {
-
+	private double Value ;
+	
 	public int getNum(ArrayList arr) {
 		int size = arr.size();
 		int num = 0 ; 

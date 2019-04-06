@@ -35,8 +35,10 @@ public class Controller {
 		}
 		
 		public void VerifiyPress(String Press) {
-			if(count == 0 && finish)
+			if(count == 0 && finish) {
 				theView.clear();
+			finish = false ; 
+			}
 			int temp ; 	
 		char[] PressChar = Press.toCharArray();
 		boolean isNum = Character.isDigit(PressChar[0]);	
@@ -71,12 +73,21 @@ public class Controller {
             else if(Press.equals(div)) {
 				Op = div ; 
 			}
+            else if(Press.equals(mod)) {
+				Op = mod ; 
+			}
+            else if(Press.equals(sqt)) {
+				Op = sqt ; 
+				ready = true ; 
+			}
 			}
 			 else if(Press.equals(eq)) { 
+				 if(!Op.equals(sqt)) {
 					num2 = theModel.getNum(arr);
 					arr.removeAll(arr);
-					  ready = true;
 					  theView.clear();
+					  ready = true;	 
+				}
 				}
 			
 		}
@@ -93,6 +104,13 @@ public class Controller {
 				else if(Op.equals(div)) {
 					theModel.DivTwoNumbers(num1, num2);	
 					}
+				else if(Op.equals(mod)) {
+					theModel.ModTwoNumbers(num1, num2);	
+					}
+				else if(Op.equals(sqt)) {
+					theModel.SqtNumber(num1);	
+					}
+
 				double res = theModel.getCalcValue();
 				theView.setRes(res);
 				ready = false ;  

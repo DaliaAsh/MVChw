@@ -10,6 +10,7 @@ public class Model {
 	private String sqt = "Sqt";
 	private String mod = "%";
 	private String eq = "=";
+	
 	public int getNum(ArrayList arr) {
 		int size = arr.size();
 		int num = 0 ; 
